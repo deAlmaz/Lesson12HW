@@ -866,9 +866,6 @@ div.categories-footer-page:hover{
 .vertical-align-middle{
     vertical-align: middle;
 }
-.horizontal-align-center{
-    horiz-align: center;
-}
 
 .clearfix{
     clear: both;
@@ -965,13 +962,17 @@ div.categories-footer-page:hover{
         letter-spacing: -0.35px;
         line-height: 16px;
         color: #ACACAC;
-        border-radius: 6px 0 0 6px;
+        border-radius: 6px;
         outline: none;
-    }
-    &:focus, input:focus{
-        color: #3D3D3D;
         border: none;
+        &:focus{
+            color: black;
+        }
+        &[type="email"], textarea {
+            background-color : white;
+        }
     }
+
     button{
         position: absolute;
         right: 0;
