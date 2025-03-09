@@ -1186,7 +1186,10 @@ input{
     border:1px solid #EAEAEA;
     display: block;
     width: 300px;
+    height: 40px;
     border-radius: 5px;
+    margin-top: -2px;
+    cursor: pointer;
 }
 /*---MAIN---*/
 
@@ -1220,7 +1223,7 @@ input{
 .fieldDescription-02{
     padding-left: 100px;
     padding-right: 100px;
-    padding-top: 32px;
+    padding-top: 34px;
 }
 .fieldForm{
     width: 300px;
@@ -1256,6 +1259,7 @@ input{
 .checkBoxLabel{
     position: absolute;
     padding-right: 236px;
+    cursor: pointer;
 }
 .checkBoxContainer{
     width: fit-content;
@@ -1333,16 +1337,14 @@ input{
 .textButtonRegister{
     width: 300px;
     height: 45px;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding: 14px 14px 10px 14px;
     font-family: 'Century Gothic', sans-serif;
     font-size: 16px;
     color: #ffffff;
     line-height: 16px;
     font-weight: 700;
-    padding-top: 12px;
-    padding-bottom: 12px;
     background-color: #46A358;
+    cursor: pointer;
 }
 .textButtonHref{
     font-weight: 500;
