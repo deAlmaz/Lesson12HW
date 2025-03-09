@@ -1181,7 +1181,7 @@ input{
     border:1px solid #EAEAEA;
     border-radius: 5px;
 }
-reg-button{
+.reg-button{
     background-color: #ffffff;
     border:1px solid #EAEAEA;
     display: block;
