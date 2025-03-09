@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GREENSHOP - Registration</title>
+<!--    <link rel="stylesheet" href="./css/reset.css">-->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+
+<div id="resultField" class="resultField"></div>
+
+<div>
+    <div class="titleParent">
+        <div class="titleParentContainer">
+            <span class="textTitleParent">
+                <b>
+                <span class="textTitle-01">
+                    Login 
+                </span>
+                </b>
+                <span class="textTitle-02">
+                     |
+                </span>
+                <b>
+                <span class="textTitle-03">
+                    Register
+                </span>
+                </b>
+            </span>
+        </div>
+        <div class="fieldDescription-01">
+            <span class="textDescription-01">
+                Enter your email and password to register.
+            </span>
+        </div>
+        <form id="myForm" action="#">
+            <div class="fieldForm padding-T-14">
+                <input class="textInput" type="text" name="username" placeholder="Username" pattern="^[a-zA-Zа-яА-Я ]+$" required>
+            </div>
+            <div class="fieldForm padding-T-16">
+                <input class="textInput" type="email" name="email" placeholder="Enter your e-mail address" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+            </div>
+            <div class="fieldForm padding-T-16">
+                <input class="textInput imagePasswordHide" type="password" name="password" placeholder="Password" pattern="^[a-zA-Z0-9]+$" required>
+            </div>
+            <div class="fieldForm padding-T-16">
+                <input class="textInput imagePasswordHide" type="password" name="password" placeholder="Confirm password" pattern="^[a-zA-Z0-9]+$" required>
+            </div>
+            <div id="checkbox-parent" class="checkBoxWrapper padding-T-12">
+                <div><label class="checkBoxLabel"><input class="checkBoxContainer" aria-label="label" type="checkbox" name="age" value="confirmed"></label></div>
+                <div id="checkbox-child"  class="textCheckbox"><span>Confirm that you're 18+ years old</span></div>
+            </div>
+            <div class="fieldForm padding-T-13">
+                <input class="textButtonRegister" type="submit" name="register" value="Register">
+            </div>
+            <div class="fieldDescription-02">
+                <span class="textDescription-02">
+                        <span class="textDesc-02-1">
+                            ———————
+                        </span>
+                        <span class="textDesc-02-2">
+                            Or register with
+                        </span>
+                        <span class="textDesc-02-3">
+                            ———————
+                        </span>
+                </span>
+            </div>
+        </form>
+        <div class="buttonContainer padding-T-30">
+            <button class="regbutton" onclick="location.href='http://www.google.com'" type="button">
+                    <span class="textButtonHref">
+                        <img src="../img/google.png" alt="" class="padding-9">Continue with Google
+                    </span>
+            </button>
+        </div>
+        <div class="buttonContainer padding-T-45">
+            <button class="button" onclick="location.href='http://www.facebook.com'" type="button">
+                    <span class="textButtonHref">
+                        <img src="../img/facebook.png" alt="" class="padding-9">Continue with Facebook
+                    </span>
+            </button>
+        </div>
+    </div>
+    <div class="footerLine">
+        <footer></footer>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("submit", function (event) {
+        event.preventDefault();
+        console.log(event, "event");
+        // Check if the submitted form is your form with the ID 'myForm'
+        if (event.target.id === "myForm") {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Get the form element
+            const form = event.target;
+
+            // Get all form fields
+            const formData = new FormData(form);
+
+            let result = "";
+
+                result +=  "\n" + "\n" + "\n"; // visuall offset top
+            // Iterate through form data and build the result string
+            formData.forEach(function (value, key) {
+                result += key + ": " + value + "\n";
+            });
+                result +=  "\n" + "\n" + "\n"; // visuall offset bottom
+            // Display the result in the resultDiv
+            document.getElementById("resultField").innerText = result;
+            // If you want to do something else with the result, you can do it here
+
+            return false;
+        }
+    });
+</script>
+
+</body>
+</html>
